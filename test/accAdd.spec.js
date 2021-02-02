@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {accAdd} = require('../dist/cloud-utils');
+var {accAdd} = require('../dist/sharegood-cloud-utils');
 
 describe('#accAdd() 加法函数，用来得到精确的加法结果', function () {
   it('accAdd(0.1 + 0.2) should return 0.3', function () {

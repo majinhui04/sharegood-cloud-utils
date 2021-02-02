@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isLetters} = require('../dist/cloud-utils');
+var {isLetters} = require('../dist/sharegood-cloud-utils');
 
 describe('#isLetters() 是否为英文字母', function () {
   it('isLetters(\'a\') should return true', function () {

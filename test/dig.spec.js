@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {dig} = require('../dist/cloud-utils');
+var {dig} = require('../dist/sharegood-cloud-utils');
 
 describe('#dig() 基于给定的键返回嵌套JSON对象中的目标值', function () {
   it('dig', function () {

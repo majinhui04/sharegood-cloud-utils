@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {addClass} = require('../dist/cloud-utils');
+var {addClass} = require('../dist/sharegood-cloud-utils');
 
 describe('#addClass() 为元素添加某个 class', function () {
   it('应该添加 class 到元素', function () {

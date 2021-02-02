@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {filterEmptyPropObj} = require('../dist/cloud-utils');
+var {filterEmptyPropObj} = require('../dist/sharegood-cloud-utils');
 
 describe('#filterEmptyPropObj() 过滤对象中为空的属性', function () {
   var obj = {name: 'foo', sex: ''};

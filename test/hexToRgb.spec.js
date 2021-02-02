@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {hexToRgb} = require('../dist/cloud-utils');
+var {hexToRgb} = require('../dist/sharegood-cloud-utils');
 
 describe('#hexToRgb() Hex 转换为 Rgb', function () {
   it('hexToRgb(\'#0033ff\').g should return 51', function () {

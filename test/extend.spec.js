@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {extend} = require('../dist/cloud-utils');
+var {extend} = require('../dist/sharegood-cloud-utils');
 
 describe('#extend() 将from所有的键值对都添加到to上面去，返回to', function () {
   it('extend({mobile: \'13888888888\', nickname: \'liwb\'}, {nickname: \'cklwb\'})', function () {

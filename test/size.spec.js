@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {size} = require('../dist/cloud-utils');
+var {size} = require('../dist/sharegood-cloud-utils');
 
 describe('#size() 获取数组，对象或字符串的大小', function () {
   it('size([1, 2, 3, 4, 5]) should return 5', function () {

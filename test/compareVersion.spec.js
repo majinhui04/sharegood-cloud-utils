@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {compareVersion} = require('../dist/cloud-utils');
+var {compareVersion} = require('../dist/sharegood-cloud-utils');
 
 describe('#compareVersion() 版本比较', function () {
   it('compareVersion(\'1.0.0\', \'1.0.1\') should return -1', function () {

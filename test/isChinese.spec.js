@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isChinese} = require('../dist/cloud-utils');
+var {isChinese} = require('../dist/sharegood-cloud-utils');
 
 describe('#isChinese() 是否为中文', function () {
   it('isChinese(\'中文\') should return true', function () {

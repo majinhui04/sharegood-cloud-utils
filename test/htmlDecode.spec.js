@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {htmlDecode} = require('../dist/cloud-utils');
+var {htmlDecode} = require('../dist/sharegood-cloud-utils');
 
 describe('#htmlDecode() html字符解码', function () {
   it('htmlDecode(\'&lt;script&gt;\') should return \'<script>\'', function () {

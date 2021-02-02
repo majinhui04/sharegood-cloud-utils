@@ -6,7 +6,7 @@ const node = require('rollup-plugin-node-resolve')
 const pack = require('../package.json')
 const version = process.env.VERSION || pack.version
 
-const moduleName = 'cloud-utils';
+const moduleName = 'sharegood-cloud-utils';
 
 const banner =
   `/*!

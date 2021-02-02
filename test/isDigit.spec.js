@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isDigit} = require('../dist/cloud-utils');
+var {isDigit} = require('../dist/sharegood-cloud-utils');
 
 describe('#isDigit() 是否为数字', function () {
   it('isDigit(\'123\') should return true', function () {

@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isMobile} = require('../dist/cloud-utils');
+var {isMobile} = require('../dist/sharegood-cloud-utils');
 
 describe('#isMobile() 是否为有效的手机号', function () {
   it('isMobile(\'15898745678\') should return true', function () {

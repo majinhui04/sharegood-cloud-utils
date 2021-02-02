@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isCardId} = require('../dist/cloud-utils');
+var {isCardId} = require('../dist/sharegood-cloud-utils');
 
 describe('#isCardId() 是否为有效的身份证号', function () {
   it('isCardId(\'411423198807127834\') should return true', function () {

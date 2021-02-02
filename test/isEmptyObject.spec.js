@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isEmptyObject} = require('../dist/cloud-utils');
+var {isEmptyObject} = require('../dist/sharegood-cloud-utils');
 
 describe('#isEmptyObject() 是否为空对象', function () {
   it('isEmptyObject({}) should return true', function () {

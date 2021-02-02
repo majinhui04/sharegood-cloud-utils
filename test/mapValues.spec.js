@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {mapValues} = require('../dist/cloud-utils');
+var {mapValues} = require('../dist/sharegood-cloud-utils');
 
 describe('#mapValues() 根据提供函数返回的值映射一个新对象', function () {
   it('mapValues({\n' +

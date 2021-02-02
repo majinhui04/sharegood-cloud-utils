@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {getMonths} = require('../dist/cloud-utils');
+var {getMonths} = require('../dist/sharegood-cloud-utils');
 
 describe('#getMonths() 返回指定长度的月份集合', function () {
   it('getMonths(\'2018-1-29\', 6, 1) should return true', function () {

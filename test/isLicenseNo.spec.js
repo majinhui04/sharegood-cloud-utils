@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isLicenseNo} = require('../dist/cloud-utils');
+var {isLicenseNo} = require('../dist/sharegood-cloud-utils');
 
 describe('#isLicenseNo() 是否为有效的车牌号码', function () {
   it('isLicenseNo(\'浙A12345\') should return true', function () {

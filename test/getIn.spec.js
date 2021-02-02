@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {getIn} = require('../dist/cloud-utils');
+var {getIn} = require('../dist/sharegood-cloud-utils');
 
 describe('#getIn() 主动防御', function () {
   it('getIn', function () {

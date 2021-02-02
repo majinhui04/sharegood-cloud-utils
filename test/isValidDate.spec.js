@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isValidDate} = require('../dist/cloud-utils');
+var {isValidDate} = require('../dist/sharegood-cloud-utils');
 
 describe('#isValidDate() 是否为有效的日期', function () {
   it('isValidDate(\'2015-01-20\') should return true', function () {

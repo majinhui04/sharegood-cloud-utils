@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {toNonExponential} = require('../dist/cloud-utils');
+var {toNonExponential} = require('../dist/sharegood-cloud-utils');
 
 describe('#toNonExponential() 科学计数法转化为数值字符串形式', function () {
   it('toNonExponential(3.3e-7) should return \'0.00000033\'', function () {

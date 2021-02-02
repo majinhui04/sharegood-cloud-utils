@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isEmpty} = require('../dist/cloud-utils');
+var {isEmpty} = require('../dist/sharegood-cloud-utils');
 
 describe('#isEmpty() 是否为空', function () {
   it('isEmpty', function () {

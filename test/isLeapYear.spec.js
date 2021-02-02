@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isLeapYear} = require('../dist/cloud-utils');
+var {isLeapYear} = require('../dist/sharegood-cloud-utils');
 
 describe('#isLeapYear() 是否为闰年', function () {
   it('isLeapYear(2000) should return true', function () {

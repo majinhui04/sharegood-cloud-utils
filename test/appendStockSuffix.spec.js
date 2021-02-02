@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {appendStockSuffix} = require('../dist/cloud-utils');
+var {appendStockSuffix} = require('../dist/sharegood-cloud-utils');
 
 describe('#appendStockSuffix() 识别股票代码添加市场后缀', function () {
   it('appendStockSuffix(\'600570\') should return 600570.SS', function () {

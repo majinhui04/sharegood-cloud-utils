@@ -1,6 +1,6 @@
 
 var {expect} = require('chai');
-var {isValidURI} = require('../dist/cloud-utils');
+var {isValidURI} = require('../dist/sharegood-cloud-utils');
 
 describe('#isValidURI() 是否为有效的 url', function () {
   it('isValidURI(\'https://github.com/lodash\') should return true', function () {

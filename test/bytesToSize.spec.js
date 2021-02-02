@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {bytesToSize} = require('../dist/cloud-utils');
+var {bytesToSize} = require('../dist/sharegood-cloud-utils');
 
 describe('#bytesToSize() 将字节转换成友好格式，如Bytes，KB，MB', function () {
   it('10000 should return 9.8 KB', function () {

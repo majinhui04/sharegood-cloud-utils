@@ -27,6 +27,8 @@ module.exports = {
     ////////////////
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-unused-vars': 1,
+    'no-useless-escape': 0,
     // 禁用 console
     'no-console': 0,
     // 禁用 alert、confirm 和 prompt

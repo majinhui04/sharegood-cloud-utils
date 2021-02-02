@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {formatPhone} = require('../dist/cloud-utils');
+var {formatPhone} = require('../dist/sharegood-cloud-utils');
 
 describe('#formatPhone() 手机号码中间部分替换成指定符号', function () {
   it('formatPhone(\'13888888888\') should return \'138****8888\'', function () {

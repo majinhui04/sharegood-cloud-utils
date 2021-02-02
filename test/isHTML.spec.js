@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isHTML} = require('../dist/cloud-utils');
+var {isHTML} = require('../dist/sharegood-cloud-utils');
 
 describe('#isHTML() 是否为 HTML 标签', function () {
   it('isHTML(\'<p>123</p>\') should return true', function () {

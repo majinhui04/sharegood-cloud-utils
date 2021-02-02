@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {encrypt} = require('../dist/cloud-utils');
+var {encrypt} = require('../dist/sharegood-cloud-utils');
 
 describe('#encrypt() 加密算法', function () {
   it('encrypt({ mobile: \'13888888888\', nickname: \'liwb\', appkey: \'ertfgdf345435568123454rtoiko5=\' }) should return \'APPKEY=ERTFGDF34543545=&MOBILE=15858264903&NICKNAME=LIWB\'', function () {

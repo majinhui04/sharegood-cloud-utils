@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {get} = require('../dist/cloud-utils');
+var {get} = require('../dist/sharegood-cloud-utils');
 
 describe('#get() 从对象中检索给定选择器指示的一组属性', function () {
   it('get', function () {

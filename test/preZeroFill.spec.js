@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {preZeroFill} = require('../dist/cloud-utils');
+var {preZeroFill} = require('../dist/sharegood-cloud-utils');
 
 describe('#preZeroFill() 对整数进行前置补0', function () {
   it('preZeroFill(12, 3) should return \'012\'', function () {

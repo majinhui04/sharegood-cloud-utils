@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isValidEmail} = require('../dist/cloud-utils');
+var {isValidEmail} = require('../dist/sharegood-cloud-utils');
 
 describe('#isValidEmail() 是否为有效的邮箱地址', function () {
   it('isValidEmail(\'123456@qq.com\') should return true', function () {

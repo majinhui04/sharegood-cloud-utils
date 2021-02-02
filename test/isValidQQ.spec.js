@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {isValidQQ} = require('../dist/cloud-utils');
+var {isValidQQ} = require('../dist/sharegood-cloud-utils');
 
 describe('#isValidQQ() 是否为有效的 qq', function () {
   it('isValidQQ(\'814563410\') should return true', function () {

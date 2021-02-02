@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {changeMoneyToChinese} = require('../dist/cloud-utils');
+var {changeMoneyToChinese} = require('../dist/sharegood-cloud-utils');
 
 describe('#changeMoneyToChinese() 数字金额大写转换', function () {
   it('changeMoneyToChinese(100111) should return "壹拾万零壹佰壹拾壹元整"', function () {

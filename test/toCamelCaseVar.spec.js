@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {toCamelCaseVar} = require('../dist/cloud-utils');
+var {toCamelCaseVar} = require('../dist/sharegood-cloud-utils');
 
 describe('#toCamelCaseVar() 中划线转换小驼峰', function () {
   it('toCamelCaseVar(\'get_account_list\') should return \'getAccountList\'', function () {

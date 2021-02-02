@@ -18,11 +18,11 @@
     <script>
         mocha.setup('bdd');
     </script>
-    <script src="../../dist/cloud-utils.js"></script>
+    <script src="../../dist/sharegood-cloud-utils.js"></script>
     <script>
         var libs = {
             'expect.js': expect,
-            '../dist/cloud-utils.js': window['cloud-utils']
+            '../dist/sharegood-cloud-utils.js': window['sharegood-cloud-utils']
         };
         var require = function(path) {
             return libs[path];

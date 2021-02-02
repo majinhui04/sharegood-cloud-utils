@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {anagrams} = require('../dist/cloud-utils');
+var {anagrams} = require('../dist/sharegood-cloud-utils');
 
 describe('#anagrams() 创建字谜', function () {
   it('anagrams(\'abc\') should return [\'abc\',\'acb\',\'bac\',\'bca\',\'cab\',\'cba\']', function () {

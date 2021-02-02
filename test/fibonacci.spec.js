@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var {fibonacci} = require('../dist/cloud-utils');
+var {fibonacci} = require('../dist/sharegood-cloud-utils');
 
 describe('#fibonacci() 斐波那契数组生成器', function () {
   it('fibonacci(5) should return [0, 1, 1, 2, 3]', function () {

@@ -6,12 +6,12 @@
     "name": "damon",
     "email": "504397517@qq.com"
   },
-  "main": "dist/cloud-utils.min.js",
-  "module": "dist/cloud-utils.esm.js",
-  "jsnext:main": "dist/cloud-utils.esm.js",
-  "browser": "dist/cloud-utils.js",
-  "unpkg": "dist/cloud-utils.min.js",
-  "jsdelivr": "dist/cloud-utils.min.js",
+  "main": "dist/sharegood-cloud-utils.min.js",
+  "module": "dist/sharegood-cloud-utils.esm.js",
+  "jsnext:main": "dist/sharegood-cloud-utils.esm.js",
+  "browser": "dist/sharegood-cloud-utils.js",
+  "unpkg": "dist/sharegood-cloud-utils.min.js",
+  "jsdelivr": "dist/sharegood-cloud-utils.min.js",
   "types": "index.d.ts",
   "files": [
     "dist/*.js",
