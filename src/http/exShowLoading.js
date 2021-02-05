@@ -2,6 +2,7 @@ let instance = null // 单例模式
 let count = 0
 
 /**
+ * @ignore
  * @type {import('axios').AxiosInstance['exHooks'][0]}
  */
 export const exShowLoading = Object.freeze({

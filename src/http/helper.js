@@ -2,6 +2,7 @@ import _ from 'lodash'
 import stringify from 'qs/lib/stringify'
 
 /**
+ * @ignore
  * 将对象序列化成参数
  * @param {object} data
  * @param {Parameters<qs.stringify>[1]} [options]
@@ -12,6 +13,7 @@ export const qsStringify = function (data, options) {
 }
 
 /**
+ * @ignore
  * 将对象转成 formData
  * @typedef {string | number | boolean | File | Blob} Val
  * @param {{[key: string]: Val | Val[]}} data
@@ -38,6 +40,7 @@ export const toFormData = function (data, arrayFormat = 'repeat') {
 }
 
 /**
+ * @ignore
  * 上传文件
  * @date 2021-02-05
  * @param {any} params={}
@@ -58,6 +61,7 @@ export const uploadFile = function (config = {}) {
 }
 
 /**
+ * @ignore
  * 下载文件
  * @date 2021-02-05
  * @param {any} params={}

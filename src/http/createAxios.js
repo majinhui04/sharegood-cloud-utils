@@ -1,4 +1,5 @@
 /**
+ * @ignore
  * 这里的配置项及拦截器通常和业务无关
  * 请求拦截器的执行顺序：最后注册--->最先注册
  * 响应拦截器的执行顺序：最先注册--->最后注册--->then
@@ -18,6 +19,7 @@ import qs from 'qs'
 import { uploadFile, downloadFile } from './helper'
 
 /**
+ * @ignore
  * 全局请求扩展配置
  * 添加一个请求拦截器 （于transformRequest之前处理）
  */
@@ -44,6 +46,7 @@ const axiosConfig = {
 }
 
 /**
+ * @ignore
  * 全局请求响应处理
  * 添加一个返回拦截器 （于transformResponse之后处理）
  * 返回的数据类型默认是json，若是其他类型（text）就会出现问题，因此用try,catch捕获异常
@@ -139,6 +142,7 @@ const axiosResponse = {
 }
 
 /**
+ * @ignore
  * @param {Parameters<axios['create']>[0]} requestConfig
  * @param {(instance: ReturnType<axios['create']>) => any} [callback]
  */

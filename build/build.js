@@ -46,7 +46,7 @@ function buildEntry(config) {
     const output = config.output
     const { file, banner } = output
     const isProd = /min\.js$/.test(file)
-    console.log(111133, file)
+
     return rollup
         .rollup(config)
         .then((bundle) => bundle.generate(output))

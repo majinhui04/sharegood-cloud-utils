@@ -38,6 +38,7 @@ export const setConfig = function (config) {
 }
 
 /**
+ * @ignore
  * 钩子函数
  * @type {import('axios').AxiosInstance['exHooks'][0]}
  */
@@ -74,6 +75,7 @@ export const hooks = Object.freeze({
 })
 
 /**
+ * @ignore
  * 取消未完成的请求
  * @param {string | string[]} name exCancelName 参数值对应的名称
  */

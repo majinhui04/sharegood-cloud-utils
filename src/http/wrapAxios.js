@@ -33,6 +33,7 @@ const complete = function (promise, exHooks, config) {
 }
 
 /**
+ * @ignore
  * 包装所有请求方法，实现相关钩子
  * @typedef {import('axios').AxiosInstance} AxiosInstance
  * @param {AxiosInstance} instance 输入旧的实例

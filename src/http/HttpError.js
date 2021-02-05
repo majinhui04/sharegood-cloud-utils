@@ -1,4 +1,5 @@
 /**
+ * @ignore
  * HTTP 请求错误信息集合
  */
 const HttpError = {
@@ -51,6 +52,7 @@ const HttpError = {
 }
 
 /**
+ * @ignore
  * 将新的提示错误描述信息覆盖旧的信息
  * @param {Object} options 新的错误信息配置，如{404:'页面未找到'}
  */
@@ -59,6 +61,7 @@ HttpError.merge = (options) => {
 }
 
 /**
+ * @ignore
  * 根据 HTTP 错误对象分析对应的错误详细内容
  * @param {{request,response:{status}}} error
  * @returns {string}
