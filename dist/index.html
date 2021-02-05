@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mocha</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./js/vue.min.js"></script>
+        <script src="./sharegood-cloud-utils.js"></script>
+        <style>
+            .result {
+                padding: 20px;
+                background-color: #dd66dd;
+                color: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            <section>
+                <h2>正常测试 - isOk: {{demo1.isOk}}</h2>
+                <div class="result">{{demo1.result}}</div>
+                <button @click="request1">请求</button>
+            </section>
+            <section>
+                <h2>重试测试 - isOk: {{demo2.isOk}}</h2>
+                <div class="result">{{demo2.result}}</div>
+                <button @click="request2">请求</button>
+            </section>
+            <section>
+                <h2>重复请求测试 - 取消: {{demo3.isOk}}</h2>
+                <div class="result">{{demo3.result}}</div>
+                <button @click="request3">快速多次点击此按钮</button>
+            </section>
+            <section>
+                <h2>下载</h2>
+                <div class="result">{{demo4.result}}</div>
+                <button @click="request4">下载</button>
+                <button @click="request4_1">下载失败</button>
+            </section>
+        </div>
+
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    demo1: {
+                        isOk: '',
+                        result: {},
+                        message: 'Hello Vue!',
+                    },
+                    demo2: {
+                        isOk: '',
+                        result: {},
+                    },
+                    demo3: {
+                        isOk: 0,
+                        result: {},
+                    },
+                    demo4: {
+                        result: '',
+                    },
+
+                    items: [],
+                    cancel: null,
+                },
+                mounted() {},
+                methods: {
+                    request1() {
+                        var http = window['sharegood-cloud-utils']['http']
+                        var request = http.createAxios({
+                            isResponseSuccess(payload) {
+                                if (payload.code === 0) {
+                                    return true
+                                } else {
+                                    return false
+                                }
+                            },
+                        })
+                        request
+                            .get('/openapi/user/get')
+                            .then((res) => {
+                                this.demo1.result = res
+                                this.demo1.isOk = true
+                            })
+                            .catch((err) => {
+                                this.demo1.result = err
+                                this.demo1.isOk = false
+                                console.error(err)
+                            })
+                    },
+                    request2() {
+                        var http = window['sharegood-cloud-utils']['http']
+                        var request = http.createAxios({})
+                        request
+                            .get('/openapi/user/get1', {
+                                exRetry: true,
+                                retry: 3,
+                                retryDelay: 1000,
+                            })
+                            .then((res) => {
+                                this.demo2.result = res
+                            })
+                            .catch((err) => {
+                                this.demo2.result = err
+
+                                console.error(err)
+                            })
+                    },
+                    request3() {
+                        var http = window['sharegood-cloud-utils']['http']
+                        var request = http.createAxios({})
+                        request
+                            .get('/openapi/user/info', {
+                                exCancel: true,
+                                //exCancelName: 'aaa',
+                            })
+                            .then((res) => {
+                                this.demo3.result = res
+                            })
+                            .catch((err) => {
+                                this.demo3.isOk = this.demo3.isOk + 1
+                                console.error(1, err)
+                            })
+                        // setTimeout(() => {
+                        //     request
+                        //         .get('/openapi/user/info', {
+                        //             exCancel: true,
+                        //             //exCancelName: 'aaa',
+                        //         })
+                        //         .then((res) => {
+                        //             this.demo3.result = res
+                        //             this.demo3.isOk = 2
+                        //         })
+                        //         .catch((err) => {
+                        //             console.error(err)
+                        //         })
+                        // }, 100)
+                    },
+                    request4() {
+                        var http = window['sharegood-cloud-utils']['http']
+                        var request = http.createAxios({})
+                        request
+                            .$downloadFile({
+                                url: '/openapi/download',
+                                method: 'get',
+                                params: {
+                                    name: 1,
+                                },
+                            })
+                            .then((res) => {
+                                //this.demo4.result = res
+                            })
+                            .catch((err) => {
+                                console.error(err)
+                            })
+                    },
+                    request4_1() {
+                        var http = window['sharegood-cloud-utils']['http']
+                        var request = http.createAxios(
+                            {
+                                isResponseSuccess(payload) {
+                                    if (payload.code === 200) {
+                                        return true
+                                    } else {
+                                        return false
+                                    }
+                                },
+                                getResponseError(payload) {
+                                    const { message, name } = payload
+                                    return { message: '网络好像走神了' }
+                                },
+                            },
+                            (instance) => {
+                                instance.exHooks.add({
+                                    onComplete(config, isResolve, resOrErr) {
+                                        console.warn(isResolve, resOrErr)
+                                    },
+                                })
+                            },
+                        )
+                        request
+                            .$downloadFile({
+                                url: '/openapi/download/error',
+                                method: 'get',
+                                params: {
+                                    name: 1,
+                                },
+                            })
+                            .then((res) => {
+                                this.demo4.result = res
+                            })
+                            .catch((err) => {
+                                this.demo4.result = err
+                                console.error(err)
+                            })
+                    },
+                },
+            })
+        </script>
+    </body>
+</html>

@@ -1,10 +1,14 @@
 const path = require('path');
 const buble = require('rollup-plugin-buble')
+const commonjs = require('rollup-plugin-commonjs')
+const babel = require('rollup-plugin-babel')
 // const cjs = require('rollup-plugin-commonjs')
 const replace = require('rollup-plugin-replace')
 const node = require('rollup-plugin-node-resolve')
 const pack = require('../package.json')
 const version = process.env.VERSION || pack.version
+
+const external = Object.keys(pack.dependencies)
 
 const moduleName = 'sharegood-cloud-utils';
 
@@ -25,7 +29,8 @@ const builds = {
     entry: resolve('src/main.js'),
     dest: resolve(`dist/${moduleName}.common.js`),
     format: 'cjs',
-    banner
+    banner,
+    external
   },
   // Runtime only (ES Modules). Used by bundlers that support ES Modules,
   // e.g. Rollup & Webpack 2
@@ -33,7 +38,8 @@ const builds = {
     entry: resolve('src/main.js'),
     dest: resolve(`dist/${moduleName}.esm.js`),
     format: 'es',
-    banner
+    banner,
+    external
   },
   // runtime-only production build (Browser)
   production: {
@@ -59,16 +65,31 @@ function genConfig(name) {
   const opts = builds[name]
   const config = {
     input: opts.entry,
-    external: opts.external,
+    //external: external.concat(opts.external || []),
+
+    external: [].concat(opts.external || []),
     plugins: [
-      node(),
-      buble()
+      node({
+        jsnext: true,
+        main: true,
+        browser: true
+      }),
+      babel({
+        //runtimeHelpers: true,
+        exclude: 'node_modules/**' // 仅仅转译我们的源码
+        }),
+    commonjs(),
     ].concat(opts.plugins || []),
     output: {
       file: opts.dest,
       format: opts.format,
       banner: opts.banner,
-      name: opts.moduleName
+      name: opts.moduleName,
+      globals: {
+          'lodash':'_',
+          axios:'axios',
+          qs:'qs'
+      },
     }
   }
 

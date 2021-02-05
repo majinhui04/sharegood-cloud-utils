@@ -11,6 +11,5 @@ node_modules
 .happypack
 npm-debug.log
 yarn.lock
-dist/
 .history
 docs/
