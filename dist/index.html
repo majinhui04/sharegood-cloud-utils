@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="./js/vue.min.js"></script>
-        <script src="./sharegood-cloud-utils.js"></script>
+        <script src="./sharegood-http.js"></script>
         <style>
             .result {
                 padding: 20px;
@@ -41,6 +41,7 @@
         </div>
 
         <script>
+            console.log(111, window['sharegood-http'])
             var app = new Vue({
                 el: '#app',
                 data: {
@@ -67,7 +68,7 @@
                 mounted() {},
                 methods: {
                     request1() {
-                        var http = window['sharegood-cloud-utils']['http']
+                        var http = window['sharegood-http']
                         var request = http.createAxios({
                             isResponseSuccess(payload) {
                                 if (payload.code === 0) {
@@ -90,7 +91,7 @@
                             })
                     },
                     request2() {
-                        var http = window['sharegood-cloud-utils']['http']
+                        var http = window['sharegood-http']
                         var request = http.createAxios({})
                         request
                             .get('/openapi/user/get1', {
@@ -108,7 +109,7 @@
                             })
                     },
                     request3() {
-                        var http = window['sharegood-cloud-utils']['http']
+                        var http = window['sharegood-http']
                         var request = http.createAxios({})
                         request
                             .get('/openapi/user/info', {
@@ -138,7 +139,7 @@
                         // }, 100)
                     },
                     request4() {
-                        var http = window['sharegood-cloud-utils']['http']
+                        var http = window['sharegood-http']
                         var request = http.createAxios({})
                         request
                             .$downloadFile({
@@ -156,7 +157,7 @@
                             })
                     },
                     request4_1() {
-                        var http = window['sharegood-cloud-utils']['http']
+                        var http = window['sharegood-http']
                         var request = http.createAxios(
                             {
                                 isResponseSuccess(payload) {

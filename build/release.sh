@@ -12,7 +12,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
   # build
   npm version $VERSION --no-git-tag-version
-  VERSION=$VERSION npm run build && npm run docs:deploy
+  VERSION=$VERSION npm run build  &&  npm run docs:deploy
 
   # commit
   git tag v$VERSION
