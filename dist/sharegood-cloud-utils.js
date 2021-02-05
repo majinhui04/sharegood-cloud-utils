@@ -1,5 +1,5 @@
 /*!
- * sharegood-cloud-utils v0.0.5 (https://github.com/majinhui04/sharegood-cloud-utils.git)
+ * sharegood-cloud-utils v0.0.6 (https://github.com/majinhui04/sharegood-cloud-utils.git)
  */
  
 (function (global, factory) {
